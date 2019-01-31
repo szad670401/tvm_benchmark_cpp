@@ -17,12 +17,7 @@ INCLUDE_DIRECTORIES(${HOME_TVM}/include)
 INCLUDE_DIRECTORIES(${HOME_TVM}/3rdparty/dmlc-core/include)
 INCLUDE_DIRECTORIES(${HOME_TVM}/3rdparty/dlpack/include)
 INCLUDE_DIRECTORIES(/usr/local/cuda/include)
-link_directories(/usr/local/cuda-9.0/lib64)
-link_directories(/home/karnivaurus/Libraries)
-link_directories(/usr/lib/x86_64-linux-gnu)
-#/usr/local/cuda-9.0/lib64/libcudart.so.9.0
-#LINK_DIRECTORIES(${HOME_TVM}/build)
-#LINK_DIRECTORIES(/usr/lib64)
+
 add_executable(tvm_cpp_benchmark   cpp_benchmark.cpp tvm_runtime_pack.cc)
 target_link_libraries(tvm_cpp_benchmark  dl pthread ${CUDA_CUDA_LIBRARY} ${CUDA_CUDART_LIBRARY})
 
